@@ -2,15 +2,18 @@ import React from "react";
 import PhoneForm from "./components/PhoneForm";
 
 class App extends React.Component {
+  id = 0;
+
   state = {
     information: [],
   };
 
   handleCreate = (data) => {
     const { information } = this.state;
-    this.setState({ information: information.concat(data) });
+    this.setState({
+      information: information.concat({ ...data, id: this.id++ }),
+    });
   };
-
   render() {
     return (
       <div>
