@@ -12,6 +12,10 @@ class PhoneForm extends Component {
   };
   handleSubmit = (e) => {
     e.preventDefault();
+    this.props.onCreate({
+      name: this.state.name,
+      phone: this.state.phone,
+    });
   };
   render() {
     return (
