@@ -12,29 +12,24 @@ class PhoneForm extends Component {
   };
   handleSubmit = (e) => {
     e.preventDefault();
-    this.props.onCreate({
-      name: this.state.name,
-      phone: this.state.phone,
-    });
-    this.setState({
-      name: "",
-      phone: "",
-    });
+    const { name, phone } = this.state;
+    this.props.onCreate({ name, phone });
+    this.setState({ name: "", phone: "" });
   };
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
         <input
-          placeholder="name"
           name="name"
-          onChange={this.handleChange}
+          placeholder="name"
           value={this.state.name}
+          onChange={this.handleChange}
         />
         <input
-          placeholder="phone number"
           name="phone"
-          onChange={this.handleChange}
+          placeholder="phone"
           value={this.state.phone}
+          onChange={this.handleChange}
         />
         <button type="submit">Register</button>
       </form>
