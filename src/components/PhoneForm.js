@@ -16,6 +16,10 @@ class PhoneForm extends Component {
       name: this.state.name,
       phone: this.state.phone,
     });
+    this.setState({
+      name: "",
+      phone: "",
+    });
   };
   render() {
     return (
@@ -33,10 +37,6 @@ class PhoneForm extends Component {
           value={this.state.phone}
         />
         <button type="submit">Register</button>
-        <div>
-          {this.state.name}
-          {this.state.phone}
-        </div>
       </form>
     );
   }
