@@ -14,7 +14,10 @@ class PhoneForm extends Component {
     e.preventDefault();
     const { name, phone } = this.state;
     this.props.onCreate({ name, phone });
-    this.setState({ name: "", phone: "" });
+    this.setState({
+      name: "",
+      phone: "",
+    });
   };
   render() {
     return (
