@@ -3,9 +3,13 @@ import PhoneForm from "./components/PhoneForm";
 import PhoneInfoList from "./components/PhoneInfoList";
 
 class App extends React.Component {
-  id = 0;
+  id = 3;
   state = {
-    information: [],
+    information: [
+      { id: 0, name: "jane doe", phone: "010-0000-0000" },
+      { id: 1, name: "john doe", phone: "010-0000-0001" },
+      { id: 2, name: "hong doe", phone: "010-0000-0002" },
+    ],
   };
   handleCreate = (data) => {
     const { information } = this.state;
